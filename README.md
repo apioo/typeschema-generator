@@ -6,7 +6,7 @@ This repository contains the [TypeSchema](https://typeschema.org/) code generato
 
 ## Usage
 
-To get started you can simply use the `docker-compose up` command to start the generator. Then generator reads the
+To get started you can simply use the `docker-compose up` command to start the generator. The generator reads the
 `typeschema.json` file from the `output/` folder and writes the generated code into the output folder. Which language
 is used depends on the `FORMAT` environment variable.
 
