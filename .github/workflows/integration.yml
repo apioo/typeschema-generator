@@ -19,7 +19,7 @@ jobs:
         env:
           FORMAT: csharp
           NAMESPACE: Generator
-        run: cd ../../ && docker-compose up && mv output/* integration/csharp/*
+        run: cd ../../ && docker-compose up && mv output/*.cs integration/csharp/
       - name: Install dependencies
         run: dotnet restore
       - name: Build
@@ -44,7 +44,7 @@ jobs:
         env:
           FORMAT: go
           NAMESPACE: generator
-        run: cd ../../ && docker-compose up && mv output/* integration/go/*
+        run: cd ../../ && docker-compose up && mv output/*.go integration/go/
       - name: Build
         run: go build -v
       - name: Test
@@ -68,7 +68,7 @@ jobs:
         env:
           FORMAT: java
           NAMESPACE: org.typeschema.generator
-        run: cd ../../ && docker-compose up && mv output/* integration/java/*
+        run: cd ../../ && docker-compose up && mv output/*.java integration/java/
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
       - name: Run
@@ -91,7 +91,7 @@ jobs:
         env:
           FORMAT: php
           NAMESPACE: Generator
-        run: cd ../../ && docker-compose up && mv output/* integration/php/*
+        run: cd ../../ && docker-compose up && mv output/*.php integration/php/
       - name: Composer install
         run: composer install --no-interaction --no-ansi --no-progress
       - name: Run
