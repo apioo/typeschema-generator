@@ -1,10 +1,10 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.phpsx</groupId>
-    <artifactId>test</artifactId>
+    <groupId>org.typeschema</groupId>
+    <artifactId>generator</artifactId>
     <version>0.1.0</version>
     <packaging>jar</packaging>
-    <name>Test</name>
+    <name>Generator</name>
     <build>
         <plugins>
             <plugin>
@@ -19,7 +19,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>org.phpsx.test.Main</mainClass>
+                                    <mainClass>org.typeschema.generator.Main</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>

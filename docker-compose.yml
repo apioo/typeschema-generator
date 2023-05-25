@@ -2,9 +2,5 @@ version: '3'
 services:
   generator:
     build: .
-    environment:
-      FORMAT: "java"
-      NAMESPACE: "org.typeschema.generator"
-      SCHEMA_FILE: "typeschema.json"
     volumes:
       - ./output:/usr/src/typeschema/output

@@ -2,9 +2,9 @@ FROM php:8.1-cli
 MAINTAINER Christoph Kappestein <christoph.kappestein@apioo.de>
 LABEL description="TypeSchema Generator"
 
-ENV FORMAT "java"
-ENV NAMESPACE "org.typeschema.generator"
-ENV SCHEMA_FILE "typeschema.json"
+ENV FORMAT="java"
+ENV NAMESPACE="org.typeschema.generator"
+ENV SCHEMA_FILE="typeschema.json"
 
 ENV COMPOSER_VERSION "2.5.5"
 ENV COMPOSER_SHA256 "566a6d1cf4be1cc3ac882d2a2a13817ffae54e60f5aa7c9137434810a5809ffc"
