@@ -104,3 +104,25 @@ jobs:
         run: composer install --no-interaction --no-ansi --no-progress
       - name: Run
         run: php main.php
+  typescript:
+    name: TypeScript
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: integration/typescript
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+      - name: Generate
+        env:
+          FORMAT: typescript
+          NAMESPACE:
+        run: cd ../../ && docker-compose up
+      - name: Move
+        run: mv ../../output/*.ts .
+      - run: npm ci
+      - run: npm run build
+      - run: node main.js
