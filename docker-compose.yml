@@ -2,5 +2,9 @@ version: '3'
 services:
   generator:
     build: .
+    environment:
+      FORMAT: "${FORMAT}"
+      NAMESPACE: "${NAMESPACE}"
+      SCHEMA_FILE: "typeschema.json"
     volumes:
       - ./output:/usr/src/typeschema/output
