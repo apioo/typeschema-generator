@@ -54,7 +54,7 @@ jobs:
       - name: Test
         run: go test -v
       - name: Run
-        run: ./generator
+        run: ./main
   java:
     name: Java
     runs-on: ubuntu-latest
