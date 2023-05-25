@@ -1,3 +1,3 @@
-module test
+module generator
 
 go 1.20
