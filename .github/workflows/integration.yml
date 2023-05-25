@@ -45,7 +45,7 @@ jobs:
       - name: Generate
         env:
           FORMAT: go
-          NAMESPACE: generator
+          NAMESPACE: main
         run: cd ../../ && docker-compose up
       - name: Move
         run: mv ../../output/*.go .
