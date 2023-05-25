@@ -12,7 +12,8 @@
   "profileImage": "",
   "read": true,
   "source": {
-    "foo": "bar"
+    "name": "Website",
+    "url": "https://www.google.com/"
   },
   "author": {
     "title": "foo"
