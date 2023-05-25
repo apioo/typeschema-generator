@@ -1,5 +1,6 @@
 ﻿
 using System.Text.Json;
+using Generator;
 
 class Program
 {
