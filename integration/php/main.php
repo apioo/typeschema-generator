@@ -11,7 +11,7 @@ require_once __DIR__ . '/News.php';
 $data = json_decode(file_get_contents(__DIR__ . '/../input.json'));
 
 $schemaManager = new \PSX\Schema\SchemaManager();
-$schema = $schemaManager->getSchema(News::class);
+$schema = $schemaManager->getSchema(\Generator\News::class);
 
 try {
     $news = (new \PSX\Schema\SchemaTraverser())->traverse($data, $schema, new \PSX\Schema\Visitor\TypeVisitor());
