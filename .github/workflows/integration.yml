@@ -78,7 +78,7 @@ jobs:
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
       - name: Run
-        run: java -jar target/generator-0.1.0.jar
+        run: java -jar target/generator-0.1.0-jar-with-dependencies.jar
   php:
     name: PHP
     runs-on: ubuntu-latest
