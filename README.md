@@ -21,62 +21,63 @@ folder to see examples how you can use the generated code.
 
 ## Configuration
 
-The following shows some example environment variables for different programming languages:
+The following shows some example environment variables for different programming languages, you can paste those settings
+directly into the `.env` file.
 
 #### CSharp
 
 ```
-FORMAT: "csharp"
-NAMESPACE: "Generator"
+FORMAT="csharp"
+NAMESPACE="Generator"
 ```
 
 #### Go
 
 ```
-FORMAT: "go"
-NAMESPACE: "generator"
+FORMAT="go"
+NAMESPACE="generator"
 ```
 
 #### Java
 
 ```
-FORMAT: "java"
-NAMESPACE: "org.typeschema.generator"
+FORMAT="java"
+NAMESPACE="org.typeschema.generator"
 ```
 
 #### PHP
 
 ```
-FORMAT: "php"
-NAMESPACE: "Generator"
+FORMAT="php"
+NAMESPACE="Generator"
 ```
 
 #### Python
 
 ```
-FORMAT: "python"
-NAMESPACE: ""
+FORMAT="python"
+NAMESPACE=""
 ```
 
 #### Ruby
 
 ```
-FORMAT: "ruby"
-NAMESPACE: ""
+FORMAT="ruby"
+NAMESPACE=""
 ```
 
 #### Rust
 
 ```
-FORMAT: "rust"
-NAMESPACE: ""
+FORMAT="rust"
+NAMESPACE=""
 ```
 
 #### TypeScript
 
 ```
-FORMAT: "typescript"
-NAMESPACE: ""
+FORMAT="typescript"
+NAMESPACE=""
 ```
 
 
