@@ -136,6 +136,27 @@ jobs:
           ruff --format=github --target-version=py37 .
       - name: Run
         run: python main.py
+  rust:
+    name: Rust
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: integration/rust
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - name: Generate
+        env:
+          FORMAT: rust
+          NAMESPACE:
+        run: cd ../../ && docker-compose up
+      - name: Move
+        run: mv ../../output/*.rs .
+      - uses: actions-rs/cargo@v1
+        with:
+          command: check
   typescript:
     name: TypeScript
     runs-on: ubuntu-latest
