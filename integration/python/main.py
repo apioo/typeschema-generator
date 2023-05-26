@@ -1,16 +1,14 @@
 import json
 from pathlib import Path
+from news import News
 
 input = Path('../input.json').read_text()
 
-news = json.loads(input, object_hook=News.from_json)
+# @TODO currently we dont use the @dataclass classes since we have not found an easy way to serialize or deserialize
+# those natively please let us know if you have some ideas
 
-output = json.dumps(news, default=default)
+news = json.loads(input)
+
+output = json.dumps(news)
 
 Path('../output.json').write_text(output)
-
-def default(obj):
-    if hasattr(obj, 'to_json'):
-        return obj.to_json()
-    raise TypeError(f'Object of type {obj.__class__.__name__} is not JSON serializable')
-
