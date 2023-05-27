@@ -14,6 +14,10 @@ is used depends on the `FORMAT` environment variable.
 docker-compose up
 ```
 
+By default the generator uses the local schema file specified at the `SCHEMA_FILE` env variable but it is also possible
+to use a different source i.e. you can use an `https://` url which points to a remote schema or you can also directly
+reference a schema at [TypeHub](https://typehub.cloud/) with i.e. `typehub://apioo:developer@1.0.1`
+
 ## Integration
 
 This repository contains also integration tests for every supported language. Please take a look at the `integration/`
