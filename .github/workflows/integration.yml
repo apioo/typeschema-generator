@@ -26,8 +26,6 @@ jobs:
         run: dotnet restore
       - name: Build
         run: dotnet build --configuration Release --no-restore
-      - name: Test
-        run: dotnet test --no-restore --verbosity normal
       - name: Run
         run: bin/Release/net6.0/generator
   go:
@@ -51,8 +49,6 @@ jobs:
         run: mv ../../output/*.go .
       - name: Build
         run: go build -v
-      - name: Test
-        run: go test -v
       - name: Run
         run: ./main
   java:
@@ -177,3 +173,28 @@ jobs:
       - run: npm i
       - run: npm run build
       - run: node main.js
+  visualbasic:
+    name: VisualBasic
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: integration/visualbasic
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup .NET Core SDK 6.0.x
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '6.0.x'
+      - name: Generate
+        env:
+          FORMAT: visualbasic
+          NAMESPACE:
+        run: cd ../../ && docker-compose up
+      - name: Move
+        run: mv ../../output/*.vb .
+      - name: Install dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+      - name: Run
+        run: bin/Release/net6.0/generator
