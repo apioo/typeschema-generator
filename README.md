@@ -17,7 +17,11 @@ docker-compose up
 ## Integration
 
 This repository contains also integration tests for every supported language. Please take a look at the `integration/`
-folder to see examples how you can use the generated code.
+folder to see examples how you can use the generated code. Our GitHub [workflow action](.github/workflows/integration.yml)
+uses the Docker-Image to generate the code in the target language and then builds a release in combination with a small
+wrapper code which reads the [input.json](integration/input.json) transforms this JSON into an internal representation,
+using the generated models and writes the result back to `integration/output.json`. Through this we test the complete
+serialize/deserialize flow with the generated models.
 
 ## Configuration
 
@@ -79,5 +83,13 @@ NAMESPACE=""
 FORMAT="typescript"
 NAMESPACE=""
 ```
+
+#### VisualBasic
+
+```
+FORMAT="visualbasic"
+NAMESPACE=""
+```
+
 
 
