@@ -197,4 +197,4 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release --no-restore
       - name: Run
-        run: bin/Release/net6.0/generator
+        run: bin/Release/net6.0/Generator
