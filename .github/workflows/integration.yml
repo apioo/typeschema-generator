@@ -156,7 +156,7 @@ jobs:
         run: mv ../../output/*.rs .
       - uses: actions-rs/cargo@v1
         with:
-          command: check
+          command: build
   typescript:
     name: TypeScript
     runs-on: ubuntu-latest
