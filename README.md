@@ -2,7 +2,7 @@
 
 ## About
 
-This repository contains the [TypeSchema](https://typeschema.org/) code generator provided as docker image.
+This repository contains the [TypeSchema](https://typeschema.org/) code generator provided as [docker image](https://hub.docker.com/repository/docker/fusio/typeschema-generator).
 
 ## Usage
 
