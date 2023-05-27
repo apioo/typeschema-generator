@@ -154,9 +154,7 @@ jobs:
         run: cd ../../ && docker-compose up
       - name: Move
         run: mv ../../output/*.rs .
-      - run: cargo install
-      - run: rustc main.rs
-      - run: ./main
+      - run: cargo run
   typescript:
     name: TypeScript
     runs-on: ubuntu-latest
