@@ -5,6 +5,6 @@ services:
     environment:
       FORMAT: "${FORMAT}"
       NAMESPACE: "${NAMESPACE}"
-      SCHEMA_FILE: "output/typeschema.json"
+      SCHEMA_FILE: "${SCHEMA_FILE}"
     volumes:
       - ./output:/usr/src/typeschema/output
