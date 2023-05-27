@@ -143,10 +143,10 @@ jobs:
       run:
         working-directory: integration/rust
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
+      - uses: actions/checkout@v3
+      - run: apt-get update
+      - run: curl https://sh.rustup.rs -sSf | sh
+      - run: rustc --version
       - name: Generate
         env:
           FORMAT: rust
@@ -154,9 +154,9 @@ jobs:
         run: cd ../../ && docker-compose up
       - name: Move
         run: mv ../../output/*.rs .
-      - uses: actions-rs/cargo@v1
-        with:
-          command: build
+      - run: cargo install
+      - run: rustc main.rs
+      - run: ./main
   typescript:
     name: TypeScript
     runs-on: ubuntu-latest
