@@ -1167,16 +1167,16 @@
         },
         {
             "name": "psx/schema",
-            "version": "v5.0.8",
+            "version": "v5.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/apioo/psx-schema.git",
-                "reference": "64a8fb32abe5dfdc71445eb23fc250b207063f42"
+                "reference": "5b8e6208c96c0796d4363bfd0bc43b47d23011f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apioo/psx-schema/zipball/64a8fb32abe5dfdc71445eb23fc250b207063f42",
-                "reference": "64a8fb32abe5dfdc71445eb23fc250b207063f42",
+                "url": "https://api.github.com/repos/apioo/psx-schema/zipball/5b8e6208c96c0796d4363bfd0bc43b47d23011f7",
+                "reference": "5b8e6208c96c0796d4363bfd0bc43b47d23011f7",
                 "shasum": ""
             },
             "require": {
@@ -1228,7 +1228,7 @@
             ],
             "support": {
                 "issues": "https://github.com/apioo/psx-schema/issues",
-                "source": "https://github.com/apioo/psx-schema/tree/v5.0.8"
+                "source": "https://github.com/apioo/psx-schema/tree/v5.0.9"
             },
             "funding": [
                 {
@@ -1244,7 +1244,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2023-05-27T17:41:20+00:00"
+            "time": "2023-05-27T20:13:42+00:00"
         },
         {
             "name": "psx/uri",
