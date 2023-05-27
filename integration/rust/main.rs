@@ -1,6 +1,16 @@
-use std::env;
+
+extern crate serde;
+extern crate serde_json;
+extern crate chrono;
+
 use std::fs;
-use serde::{Serialize, Deserialize};
+use news::News;
+
+mod location;
+mod meta;
+mod author;
+mod web;
+mod news;
 
 fn main() {
     let input = fs::read_to_string("../input.json").expect("Could not read input");
