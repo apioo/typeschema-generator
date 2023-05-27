@@ -151,6 +151,23 @@ jobs:
       - name: Move
         run: mv ../../output/*.rs .
       - run: cargo run
+  swift:
+    name: Swift
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: integration/swift
+    steps:
+      - uses: actions/checkout@v3
+      - name: Generate
+        env:
+          FORMAT: typescript
+          NAMESPACE:
+        run: cd ../../ && docker-compose up
+      - name: Move
+        run: mv ../../output/*.swift .
+      - name: Build
+        run: swift build
   typescript:
     name: TypeScript
     runs-on: ubuntu-latest
