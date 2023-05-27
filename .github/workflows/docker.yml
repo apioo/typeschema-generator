@@ -16,7 +16,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: typeschema/generator
+          images: fusio/typeschema-generator
           tags: |
             type=ref,event=branch
             type=ref,event=pr
