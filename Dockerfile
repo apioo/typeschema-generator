@@ -1,6 +1,6 @@
 FROM php:8.1-cli
 MAINTAINER Christoph Kappestein <christoph.kappestein@apioo.de>
-LABEL description="TypeSchema Generator"
+LABEL description="TypeSchema Code Generator"
 
 ENV COMPOSER_VERSION "2.5.5"
 ENV COMPOSER_SHA256 "566a6d1cf4be1cc3ac882d2a2a13817ffae54e60f5aa7c9137434810a5809ffc"
@@ -34,4 +34,4 @@ WORKDIR /usr/src/typeschema
 RUN composer install
 
 # run generation
-CMD php vendor/psx/schema/bin/schema schema:parse $SCHEMA_FILE output --format=$FORMAT --config=namespace=$NAMESPACE
+CMD php vendor/psx/schema/bin/schema schema:parse "$SOURCE" output --format="$FORMAT" --config="$CONFIG"

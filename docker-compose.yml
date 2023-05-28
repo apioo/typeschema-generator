@@ -4,7 +4,7 @@ services:
     build: .
     environment:
       FORMAT: "${FORMAT}"
-      NAMESPACE: "${NAMESPACE}"
-      SCHEMA_FILE: "${SCHEMA_FILE}"
+      CONFIG: "${CONFIG}"
+      SOURCE: "${SOURCE}"
     volumes:
       - ./output:/usr/src/typeschema/output
