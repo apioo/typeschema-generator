@@ -1,4 +1,4 @@
-FROM php:8.1-cli
+FROM php:8.3-cli
 MAINTAINER Christoph Kappestein <christoph.kappestein@apioo.de>
 LABEL description="TypeSchema Code Generator"
 
