@@ -1,11 +1,18 @@
 import json
 from pathlib import Path
-from .news import News
+from gen.news import News
 
-input = Path('../input.json').read_text()
 
-news = News.model_validate_json(input)
+def main():
+  input = Path('../input.json').read_text()
 
-output = json.dumps(news)
+  news = News.model_validate_json(input)
 
-Path('../output.json').write_text(output)
+  output = news.model_dump_json()
+
+  Path('../output.json').write_text(output)
+
+
+if __name__ == '__main__':
+  main()
+

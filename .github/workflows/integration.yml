@@ -118,7 +118,7 @@ jobs:
           NAMESPACE: ""
         run: cd ../../ && docker compose up
       - name: Move
-        run: mv ../../output/*.py .
+        run: mv ../../output/*.py ./gen
       - name: Run
         run: python main.py
   rust:
