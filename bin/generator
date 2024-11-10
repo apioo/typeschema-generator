@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-$loader = __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 $schemaManager = new \PSX\Schema\SchemaManager();
 
