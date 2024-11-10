@@ -120,8 +120,6 @@ jobs:
       - name: Move
         run: mv ../../output/*.py .
       - uses: astral-sh/ruff-action@v1
-        with:
-          args: "format --check --ignore F401"
       - name: Run
         run: python main.py
   rust:
