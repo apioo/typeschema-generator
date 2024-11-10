@@ -13,7 +13,6 @@
     "Author.ts",
     "Location.ts",
     "Meta.ts",
-    "News.ts",
-    "Web.ts",
+    "News.ts"
   ]
 }
