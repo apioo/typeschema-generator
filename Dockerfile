@@ -30,8 +30,10 @@ VOLUME /usr/src/typeschema/output
 COPY . /usr/src/typeschema
 WORKDIR /usr/src/typeschema
 
+RUN chmod +x /usr/src/typeschema/bin/generator
+
 # run composer
 RUN composer install
 
 # run generation
-CMD php bin/generate.php schema:parse "$SOURCE" output --format="$FORMAT" --config="namespace=$NAMESPACE"
+CMD php bin/generator schema:parse "$SOURCE" output --format="$FORMAT" --config="namespace=$NAMESPACE"
