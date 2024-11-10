@@ -5,19 +5,85 @@
   "inlineConfig": {
     "foo": "bar"
   },
-  "tags": ["foo", "bar"],
-  "receiver": [{
-    "title": "foo"
-  }],
-  "profileImage": "",
+  "mapTags": {
+    "foo": "bar",
+    "bar": "foo"
+  },
+  "mapReceiver": [
+    {
+      "title": "foo",
+      "email": "foo@bar.com",
+      "categories": [
+        "foo",
+        "bar"
+      ],
+      "locations": [
+        {
+          "lat": 51.5167,
+          "long": 9.9167
+        }
+      ],
+      "origin": {
+        "lat": 51.5167,
+        "long": 9.9167
+      }
+    }
+  ],
+  "tags": [
+    "foo",
+    "bar"
+  ],
+  "receiver": [
+    {
+      "title": "foo",
+      "email": "foo@bar.com",
+      "categories": [
+        "foo",
+        "bar"
+      ],
+      "locations": [
+        {
+          "lat": 51.5167,
+          "long": 9.9167
+        }
+      ],
+      "origin": {
+        "lat": 51.5167,
+        "long": 9.9167
+      }
+    }
+  ],
   "read": true,
-  "source": {
-    "name": "Website",
-    "url": "https://www.google.com/"
-  },
   "author": {
-    "title": "foo"
+    "title": "foo",
+    "email": "foo@bar.com",
+    "categories": [
+      "foo",
+      "bar"
+    ],
+    "locations": [
+      {
+        "lat": 51.5167,
+        "long": 9.9167
+      }
+    ],
+    "origin": {
+      "lat": 51.5167,
+      "long": 9.9167
+    }
   },
+  "meta": {
+    "foo": "bar"
+  },
+  "sendDate": "2024-11-10",
+  "readDate": "2024-11-10T11:52:00Z",
   "price": 13.37,
-  "content": "foobar"
+  "rating": 1337,
+  "question": "foobar",
+  "content": "foobar",
+  "version": "foobar",
+  "coffeeTime": "11:52:00",
+  "g-recaptcha-response": "foobar",
+  "media.fields": "foobar",
+  "payload": "foobar"
 }
