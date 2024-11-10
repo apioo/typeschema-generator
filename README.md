@@ -36,63 +36,63 @@ directly into the `.env` file.
 
 ```
 FORMAT="csharp"
-CONFIG="namespace=Generator"
+NAMESPACE="Generator"
 ```
 
 #### Go
 
 ```
 FORMAT="go"
-CONFIG="namespace=generator"
+NAMESPACE="generator"
 ```
 
 #### Java
 
 ```
 FORMAT="java"
-CONFIG="namespace=org.typeschema.generator"
+NAMESPACE="org.typeschema.generator"
 ```
 
 #### PHP
 
 ```
 FORMAT="php"
-CONFIG="namespace=Generator"
+NAMESPACE="Generator"
 ```
 
 #### Python
 
 ```
 FORMAT="python"
-CONFIG=""
+NAMESPACE=""
 ```
 
 #### Ruby
 
 ```
 FORMAT="ruby"
-CONFIG=""
+NAMESPACE=""
 ```
 
 #### Rust
 
 ```
 FORMAT="rust"
-CONFIG=""
+NAMESPACE=""
 ```
 
 #### TypeScript
 
 ```
 FORMAT="typescript"
-CONFIG=""
+NAMESPACE=""
 ```
 
 #### VisualBasic
 
 ```
 FORMAT="visualbasic"
-CONFIG=""
+NAMESPACE=""
 ```
 
 

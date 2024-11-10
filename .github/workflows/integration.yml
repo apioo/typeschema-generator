@@ -18,7 +18,7 @@ jobs:
       - name: Generate
         env:
           FORMAT: csharp
-          CONFIG: "namespace=Generator"
+          NAMESPACE: "Generator"
         run: cd ../../ && docker compose up
       - name: Move
         run: mv ../../output/*.cs .
@@ -43,7 +43,7 @@ jobs:
       - name: Generate
         env:
           FORMAT: go
-          CONFIG: "namespace=main"
+          NAMESPACE: "main"
         run: cd ../../ && docker compose up
       - name: Move
         run: mv ../../output/*.go .
@@ -67,7 +67,7 @@ jobs:
       - name: Generate
         env:
           FORMAT: java
-          CONFIG: "namespace=org.typeschema.generator"
+          NAMESPACE: "org.typeschema.generator"
         run: cd ../../ && docker compose up
       - name: Move
         run: mv ../../output/*.java .
@@ -92,7 +92,7 @@ jobs:
       - name: Generate
         env:
           FORMAT: php
-          CONFIG: "namespace=Generator"
+          NAMESPACE: "Generator"
         run: cd ../../ && docker compose up
       - name: Move
         run: mv ../../output/*.php .
@@ -115,7 +115,7 @@ jobs:
       - name: Generate
         env:
           FORMAT: python
-          CONFIG:
+          NAMESPACE: ""
         run: cd ../../ && docker compose up
       - name: Move
         run: mv ../../output/*.py .
@@ -146,7 +146,7 @@ jobs:
       - name: Generate
         env:
           FORMAT: rust
-          CONFIG:
+          NAMESPACE: ""
         run: cd ../../ && docker compose up
       - name: Move
         run: mv ../../output/*.rs .
@@ -166,7 +166,7 @@ jobs:
       - name: Generate
         env:
           FORMAT: typescript
-          CONFIG:
+          NAMESPACE: ""
         run: cd ../../ && docker compose up
       - name: Move
         run: mv ../../output/*.ts .
@@ -188,7 +188,7 @@ jobs:
       - name: Generate
         env:
           FORMAT: visualbasic
-          CONFIG:
+          NAMESPACE: ""
         run: cd ../../ && docker compose up
       - name: Move
         run: mv ../../output/*.vb .
