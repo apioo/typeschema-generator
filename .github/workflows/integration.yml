@@ -119,7 +119,6 @@ jobs:
         run: cd ../../ && docker compose up
       - name: Move
         run: mv ../../output/*.py .
-      - uses: astral-sh/ruff-action@v1
       - name: Run
         run: python main.py
   rust:
