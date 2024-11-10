@@ -6,10 +6,9 @@ extern crate chrono;
 use std::fs;
 use news::News;
 
+mod author;
 mod location;
 mod meta;
-mod author;
-mod web;
 mod news;
 
 fn main() {
