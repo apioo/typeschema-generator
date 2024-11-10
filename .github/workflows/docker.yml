@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: fusio/typeschema-generator
+          images: apiootech/typeschema-generator
           tags: |
             type=ref,event=branch
             type=ref,event=pr
