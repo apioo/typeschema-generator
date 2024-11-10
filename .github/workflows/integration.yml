@@ -19,7 +19,7 @@ jobs:
         env:
           FORMAT: csharp
           CONFIG: "namespace=Generator"
-        run: cd ../../ && docker-compose up
+        run: cd ../../ && docker compose up
       - name: Move
         run: mv ../../output/*.cs .
       - name: Install dependencies
@@ -44,7 +44,7 @@ jobs:
         env:
           FORMAT: go
           CONFIG: "namespace=main"
-        run: cd ../../ && docker-compose up
+        run: cd ../../ && docker compose up
       - name: Move
         run: mv ../../output/*.go .
       - name: Build
@@ -68,7 +68,7 @@ jobs:
         env:
           FORMAT: java
           CONFIG: "namespace=org.typeschema.generator"
-        run: cd ../../ && docker-compose up
+        run: cd ../../ && docker compose up
       - name: Move
         run: mv ../../output/*.java .
       - name: Build with Maven
@@ -93,7 +93,7 @@ jobs:
         env:
           FORMAT: php
           CONFIG: "namespace=Generator"
-        run: cd ../../ && docker-compose up
+        run: cd ../../ && docker compose up
       - name: Move
         run: mv ../../output/*.php .
       - name: Composer install
@@ -116,7 +116,7 @@ jobs:
         env:
           FORMAT: python
           CONFIG:
-        run: cd ../../ && docker-compose up
+        run: cd ../../ && docker compose up
       - name: Move
         run: mv ../../output/*.py .
       - name: Install dependencies
@@ -147,7 +147,7 @@ jobs:
         env:
           FORMAT: rust
           CONFIG:
-        run: cd ../../ && docker-compose up
+        run: cd ../../ && docker compose up
       - name: Move
         run: mv ../../output/*.rs .
       - run: cargo run
@@ -167,7 +167,7 @@ jobs:
         env:
           FORMAT: typescript
           CONFIG:
-        run: cd ../../ && docker-compose up
+        run: cd ../../ && docker compose up
       - name: Move
         run: mv ../../output/*.ts .
       - run: npm i
@@ -189,7 +189,7 @@ jobs:
         env:
           FORMAT: visualbasic
           CONFIG:
-        run: cd ../../ && docker-compose up
+        run: cd ../../ && docker compose up
       - name: Move
         run: mv ../../output/*.vb .
       - name: Install dependencies
