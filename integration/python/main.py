@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from .news import News
 
 input = Path('../input.json').read_text()
 
