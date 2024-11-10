@@ -9,7 +9,9 @@ public class Main {
     public static void main(String[] args) throws IOException {
         String input = Files.readString(Path.of("../input.json"));
 
-        ObjectMapper objectMapper = new ObjectMapper();
+        ObjectMapper objectMapper = (new ObjectMapper())
+            .findAndRegisterModules()
+            .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
         News data = objectMapper.readValue(input, News.class);
 
