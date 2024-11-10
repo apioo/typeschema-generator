@@ -11,10 +11,10 @@ jobs:
         working-directory: integration/csharp
     steps:
       - uses: actions/checkout@v4
-      - name: Setup .NET Core SDK 6.0.x
+      - name: Setup .NET Core SDK 8.0.x
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '6.0.x'
+          dotnet-version: '8.0.x'
       - name: Generate
         env:
           FORMAT: csharp
@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release --no-restore
       - name: Run
-        run: bin/Release/net6.0/generator
+        run: bin/Release/net8.0/generator
   go:
     name: Go
     runs-on: ubuntu-latest
@@ -181,10 +181,10 @@ jobs:
         working-directory: integration/visualbasic
     steps:
       - uses: actions/checkout@v4
-      - name: Setup .NET Core SDK 6.0.x
+      - name: Setup .NET Core SDK 8.0.x
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '6.0.x'
+          dotnet-version: '8.0.x'
       - name: Generate
         env:
           FORMAT: visualbasic
@@ -197,4 +197,4 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release --no-restore
       - name: Run
-        run: bin/Release/net6.0/Generator
+        run: bin/Release/net8.0/Generator
