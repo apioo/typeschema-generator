@@ -9,8 +9,8 @@
     "foo": "bar",
     "bar": "foo"
   },
-  "mapReceiver": [
-    {
+  "mapReceiver": {
+    "foo": {
       "title": "foo",
       "email": "foo@bar.com",
       "categories": [
@@ -28,7 +28,7 @@
         "long": 9.9167
       }
     }
-  ],
+  },
   "tags": [
     "foo",
     "bar"
