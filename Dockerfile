@@ -34,4 +34,4 @@ WORKDIR /usr/src/typeschema
 RUN composer install
 
 # run generation
-CMD php vendor/psx/schema/bin/schema schema:parse "$SOURCE" output --format="$FORMAT" --config="namespace=$NAMESPACE"
+CMD php bin/generate.php schema:parse "$SOURCE" output --format="$FORMAT" --config="namespace=$NAMESPACE"
