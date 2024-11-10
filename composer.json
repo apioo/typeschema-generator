@@ -1,6 +1,6 @@
 {
   "require": {
-    "php": ">=8.1",
-    "psx/schema": "^5.0"
+    "php": ">=8.2",
+    "psx/schema": "^7.0"
   }
 }
