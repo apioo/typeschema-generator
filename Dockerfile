@@ -36,4 +36,4 @@ RUN chmod +x /usr/src/typeschema/bin/generator
 RUN composer install
 
 # run generation
-CMD php bin/generator schema:parse "$SOURCE" output --format="$FORMAT" --config="namespace=$NAMESPACE"
+CMD php bin/generator schema:parse "output/$SOURCE" output --format="$FORMAT" --config="namespace=$NAMESPACE"
