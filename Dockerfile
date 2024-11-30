@@ -2,6 +2,10 @@ FROM php:8.3-cli
 MAINTAINER Christoph Kappestein <christoph.kappestein@apioo.de>
 LABEL description="TypeSchema Code Generator"
 
+ENV FORMAT ""
+ENV NAMESPACE ""
+ENV SOURCE "typeschema.json"
+
 ENV COMPOSER_VERSION "2.5.5"
 ENV COMPOSER_SHA256 "566a6d1cf4be1cc3ac882d2a2a13817ffae54e60f5aa7c9137434810a5809ffc"
 
